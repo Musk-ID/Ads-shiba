@@ -64,7 +64,7 @@ class mainbot:
             else:
                 self.masuk = self.get_user()
                 print(f"  {r}[{p}{self.time}{r}] {p}Surf ads success get reward 4 SHIB {q}- {p}now "+self.masuk[1])
-                setup().countdown(5)
+                setup().countdown(int(5))
 
     def get_mainbot(self):
         if not os.path.exists(".cookie"):
@@ -75,7 +75,7 @@ class mainbot:
         os.system('cls' if os.name=='nt' else 'clear')
         self.account = self.get_user()
         setup().message(self.logo)
-        setup().message(f"  {t}⏣ {p}Username {q}:{p}"+self.account[0].removeprefix("Welcome")+f"\n  {t}⏣ {p}Balance  {q}: {p}"+self.account[1]+f" SHIB \n  {t}⏣ {p}Referral {q}: {p}"+self.account[2].get("value")+f"\n\n  {r}      [{p}1{r}] {p}Claim fauacet \n  {r}      [{p}2{r}] {p}Surf ads\n  {r}      [{p}3{r}] {p}Exit")
+        setup().message(f"  {t}⏣ {p}Username {q}:{p}"+self.account[0].removeprefix("Welcome")+f"\n  {t}⏣ {p}Balance  {q}: {p}"+self.account[1]+f" SHIB \n  {t}⏣ {p}Referral {q}: {p}"+self.account[2].get("value")+f"\n\n  {r}      [{p}1{r}] {p}Claim faucet \n  {r}      [{p}2{r}] {p}Surf ads\n  {r}      [{p}3{r}] {p}Exit")
         pilpel = input(f"  {t}>> {p}")
         print("")
         if pilpel in ["1","01"]:
